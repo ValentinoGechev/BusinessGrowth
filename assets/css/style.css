@@ -6,6 +6,7 @@
     --blue-background-color: #186FEB;
     --grey-color: rgba(202, 200, 196, 0.6);
     --white-background-opacity: rgba(255, 255, 255, 0.3);
+    --white-background-opacity-hovered: rgba(175, 175, 175, 0.6);
     --light-blue-color: rgba(11, 200, 255, 0.9);
     --light-blue-color-hovered: rgba(9, 138, 177, 0.9);
 }
@@ -113,8 +114,13 @@ body {
   text-decoration: none;
 }
 
-a.btn.grey {
+a.btn.btn-background {
   background-color: var(--white-background-opacity);
+}
+
+a.btn.btn-background:hover {
+  color: var(--white-color);
+  background-color: var(--white-background-opacity-hovered);  
 }
 
 /* Hero section */
