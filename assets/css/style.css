@@ -5,8 +5,9 @@
     --p-dark-font-color: #rgba(33, 55, 87, 0.7);
     --blue-background-color: #186FEB;
     --grey-color: rgba(202, 200, 196, 0.6);
-    --white-background-opacity: rgba(255, 255, 255, 0.4);
-    --light-blue-color: #0BC8FF;
+    --white-background-opacity: rgba(255, 255, 255, 0.3);
+    --light-blue-color: rgba(11, 200, 255, 0.9);
+    --light-blue-color-hovered: rgba(9, 138, 177, 0.9);
 }
 
 * {
@@ -15,19 +16,20 @@
 }
 
 body {
-  font-family: "Roboto", "Poppins";
+  font-family: "Roboto", "Poppins";  
 }
 
 .wrapper {
   width: 1300px;
   margin: 0 auto;
-  padding: 0 130px;
+  padding: 0 50px;
 }
 
 /* Header - Navigation */
 
 .dot {
   color: var(--light-blue-color);
+  font-size: 40px;
 }
 
 .header-logo {
@@ -35,15 +37,14 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: -0.03em;
 }
 
 .header-phone-number {  
   color: var(--white-color);
   font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
+  font-style: normal;  
   font-size: 10px;
   letter-spacing: -0.03em;
 }
@@ -52,7 +53,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.2); */
   padding: 2px 2px;
   padding-right: 0;
   overflow: hidden;
@@ -61,7 +62,7 @@ body {
   z-index: 200;
   width: calc(1300px - 200px);
   top: 30px;
-  height: 40px;
+  height: 50px;
 }
 
 .desktop-nav .logo a {
@@ -83,28 +84,37 @@ body {
   margin: 0 15px;
 }
 
+.desktop-nav a {
+  color: var(--white-color);
+}
+
+.desktop-nav a:hover {
+  color: var(--light-blue-color);
+}
+
 .desktop-nav .menu-items li:nth-last-of-type(1) {
   margin-right: 0;
 }
 
 .desktop-nav .menu-items li a {
-  text-decoration: none;
-  color: var(--white-color);
+  text-decoration: none;  
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 0%;
+  font-size: 14px;  
 }
 
-a.btn {
-  background-color: var(--white-background-opacity);
+.btn {  
   color: var(--white-color);
   font-weight: 500;
   font-size: 14px;
-  line-height: 0%;
   border-radius: 100px;
   padding: 14px 25px;
+  text-decoration: none;
+}
+
+a.btn.grey {
+  background-color: var(--white-background-opacity);
 }
 
 /* Hero section */
@@ -114,17 +124,74 @@ a.btn {
   display: flex;
   align-items: center;
   justify-content: space-between;  
+  color: var(--white-color);
+}
+
+.hero-container .left {
+  flex: 1;
 }
 
 .hero-container .left h1 {
   font-family: Poppins;
   font-weight: bold;
-  font-size: 50px;
-  /* or 69px */
+  font-size: 50px;  
+  padding-bottom: 20px;  
+}
 
+.hero-container .left .btn {
+  margin-right: 30px;  
+}
+
+.hero-container .left .btn {
+  border: 2px solid var(--white-color);
+  font-weight: bold;
+}
+
+.hero-container .left .btn:hover {
+  background-color: var(--white-background-opacity);
+}
+
+.hero-container .left .btn.cyan {  
+  background-color: var(--light-blue-color);  
+}
+
+.hero-container .left .btn.cyan:hover {  
+  background-color: var(--light-blue-color-hovered);  
+}
+
+.hero-container .right {
+  padding-right: 30px;
+}
+
+.hero-content {
+  width: 600px;
+  padding-bottom: 40px;      
+}
+
+.hero-content h1, p {
+  line-height: 1.5em;
+}
+
+.hero-content h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 69px;
   letter-spacing: -0.03em;
 }
 
-.hero-bg {
-  display: none;
+.hero-content p {
+  font-size: 18px;
+  line-height: 30px;
 }
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;  
+  margin: 0 0;
+  width: 100%;
+  z-index: -1;  
+}
+
