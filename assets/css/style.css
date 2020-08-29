@@ -1,0 +1,90 @@
+/* Declare commonly used variables /ex. "background-color: var(--name-of-variable)"/ */
+:root {    
+    --white-font-color: #ffffff;
+    --h2-dark-font-color: #213757;
+    --p-dark-font-color: #rgba(33, 55, 87, 0.7);
+    --blue-background-color: #186FEB;
+    --grey-color: rgba(202, 200, 196, 0.6);
+    --white-background-opacity: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Poppins";
+}
+
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 130px;
+}
+
+/* Header - Navigation */
+
+.desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.2);
+  padding: 2px 2px;
+  padding-right: 0;
+  overflow: hidden;
+
+  position: fixed;
+  z-index: 200;
+  width: calc(1440px - 200px);
+  top: 30px;
+}
+
+.desktop-nav .logo {
+  display: flex;
+}
+
+.desktop-nav .menu-items {
+  display: flex;
+  list-style: none;
+}
+
+.desktop-nav .menu-items li {
+  margin: 0 15px;
+}
+
+.desktop-nav .menu-items li:nth-last-of-type(1) {
+  margin-right: 0;
+}
+
+.desktop-nav .menu-items li a {
+  text-decoration: none;
+  color: var(--white-font-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0%;
+}
+
+.desktop-nav .menu-items li a.active::after {
+  content: ""; /* required for the after element */
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: var(--white-background-opacity);
+}
+
+.desktop-nav .menu-items li a.btn {
+  border-radius: 100px;
+  padding: 14px 25px;
+}
+
+a.btn {
+  background-color: var(--white-background-opacity);
+  color: var(--white-font-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0%;
+}
