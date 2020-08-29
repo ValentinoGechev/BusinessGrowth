@@ -1,11 +1,12 @@
 /* Declare commonly used variables /ex. "background-color: var(--name-of-variable)"/ */
 :root {    
-    --white-font-color: #ffffff;
+    --white-color: #ffffff;
     --h2-dark-font-color: #213757;
     --p-dark-font-color: #rgba(33, 55, 87, 0.7);
     --blue-background-color: #186FEB;
     --grey-color: rgba(202, 200, 196, 0.6);
     --white-background-opacity: rgba(255, 255, 255, 0.4);
+    --light-blue-color: #0BC8FF;
 }
 
 * {
@@ -18,12 +19,34 @@ body {
 }
 
 .wrapper {
-  width: 1440px;
+  width: 1300px;
   margin: 0 auto;
   padding: 0 130px;
 }
 
 /* Header - Navigation */
+
+.dot {
+  color: var(--light-blue-color);
+}
+
+.header-logo {
+  color: var(--white-color);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+
+.header-phone-number {  
+  color: var(--white-color);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: -0.03em;
+}
 
 .desktop-nav {
   display: flex;
@@ -36,12 +59,19 @@ body {
 
   position: fixed;
   z-index: 200;
-  width: calc(1440px - 200px);
+  width: calc(1300px - 200px);
   top: 30px;
+  height: 40px;
 }
 
-.desktop-nav .logo {
-  display: flex;
+.desktop-nav .logo a {
+  display: flex;  
+  text-decoration: none;
+  align-items: center;
+}
+
+.desktop-nav .logo a p, img {
+  margin: 0 5px;
 }
 
 .desktop-nav .menu-items {
@@ -59,7 +89,7 @@ body {
 
 .desktop-nav .menu-items li a {
   text-decoration: none;
-  color: var(--white-font-color);
+  color: var(--white-color);
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -67,24 +97,34 @@ body {
   line-height: 0%;
 }
 
-.desktop-nav .menu-items li a.active::after {
-  content: ""; /* required for the after element */
-  position: absolute;
-  height: 3px;
-  width: 100%;
+a.btn {
   background-color: var(--white-background-opacity);
-}
-
-.desktop-nav .menu-items li a.btn {
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0%;
   border-radius: 100px;
   padding: 14px 25px;
 }
 
-a.btn {
-  background-color: var(--white-background-opacity);
-  color: var(--white-font-color);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 0%;
+/* Hero section */
+
+.hero-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.hero-container .left h1 {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 50px;
+  /* or 69px */
+
+  letter-spacing: -0.03em;
+}
+
+.hero-bg {
+  display: none;
 }
