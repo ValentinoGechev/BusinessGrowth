@@ -146,10 +146,7 @@ a.btn.btn-background:hover {
 
 .hero-container .left .btn {
   margin-right: 30px;  
-}
-
-.hero-container .left .btn {
-  border: 2px solid var(--white-color);
+  border: 1px solid var(--white-color);
   font-weight: bold;
 }
 
@@ -158,10 +155,12 @@ a.btn.btn-background:hover {
 }
 
 .hero-container .left .btn.cyan {  
+  border: 1px solid var(--light-blue-color);
   background-color: var(--light-blue-color);  
 }
 
 .hero-container .left .btn.cyan:hover {  
+  border: 1px solid var(--light-blue-color-hovered);
   background-color: var(--light-blue-color-hovered);  
 }
 
@@ -201,3 +200,33 @@ a.btn.btn-background:hover {
   z-index: -1;  
 }
 
+/* Animation  */
+
+.desktop-nav {
+  animation: fadeDown 500ms forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-container .left {
+  opacity: 0;
+  animation: fadeIn 500ms forwards;
+  animation-delay: 200ms; 
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
