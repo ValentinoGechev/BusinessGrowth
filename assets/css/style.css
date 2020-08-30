@@ -43,6 +43,7 @@ body {
   font-weight: bold;
   font-size: 25px;
   letter-spacing: -0.03em;
+  padding-bottom: 10px;
 }
 
 .header-phone-number {  
@@ -58,16 +59,29 @@ body {
   justify-content: space-between;
   align-items: center;
   /* box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.8);  */
-  padding: 2px 2px;
-  padding-right: 0;
+  padding: 30px 50px;
+  /* padding-right: 0; */  
   overflow: hidden;
   border-radius: 100px;
+
+  background-color: none;
+  transition: background-color 200ms linear;
 
   position: fixed;
   z-index: 200;
   width: calc(1300px - 200px);
   top: 30px;
   height: 50px;
+}
+
+.desktop-nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 200ms linear;
+}
+
+.desktop-nav.hovered {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 200ms linear;
 }
 
 .desktop-nav .logo a {
