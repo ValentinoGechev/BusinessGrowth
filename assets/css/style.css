@@ -1,6 +1,7 @@
 /* Declare commonly used variables /ex. "background-color: var(--name-of-variable)"/ */
 :root {    
     --white-color: #ffffff;
+    --background-color: #f3f3f3;
     --h2-dark-font-color: #213757;
     --p-dark-font-color: #rgba(33, 55, 87, 0.7);
     --blue-background-color: #186FEB;
@@ -17,13 +18,14 @@
 }
 
 body {
+  background-color: var(--background-color);
   font-family: "Roboto", "Poppins";  
 }
 
 .wrapper {
   width: 1300px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 100px;
 }
 
 /* Header - Navigation */
@@ -58,6 +60,7 @@ body {
   padding: 2px 2px;
   padding-right: 0;
   overflow: hidden;
+  border-radius: 100px;
 
   position: fixed;
   z-index: 200;
@@ -72,7 +75,7 @@ body {
   align-items: center;
 }
 
-.desktop-nav .logo a p, img {
+.desktop-nav .logo a p, .desktop-nav .logo a img {
   margin: 0 5px;
 }
 
@@ -123,9 +126,9 @@ a.btn.btn-background:hover {
   background-color: var(--white-background-opacity-hovered);  
 }
 
-/* Hero section */
+/* header section */
 
-.hero-container {
+.header-container {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -133,51 +136,51 @@ a.btn.btn-background:hover {
   color: var(--white-color);
 }
 
-.hero-container .left {
+.header-container .left {
   flex: 1;
 }
 
-.hero-container .left h1 {
+.header-container .left h1 {
   font-family: Poppins;
   font-weight: bold;
   font-size: 50px;  
   padding-bottom: 20px;  
 }
 
-.hero-container .left .btn {
+.header-container .left .btn {
   margin-right: 30px;  
   border: 1px solid var(--white-color);
   font-weight: bold;
 }
 
-.hero-container .left .btn:hover {
+.header-container .left .btn:hover {
   background-color: var(--white-background-opacity);
 }
 
-.hero-container .left .btn.cyan {  
+.header-container .left .btn.cyan {  
   border: 1px solid var(--light-blue-color);
   background-color: var(--light-blue-color);  
 }
 
-.hero-container .left .btn.cyan:hover {  
+.header-container .left .btn.cyan:hover {  
   border: 1px solid var(--light-blue-color-hovered);
   background-color: var(--light-blue-color-hovered);  
 }
 
-.hero-container .right {
+.header-container .right {
   padding-right: 30px;
 }
 
-.hero-content {
+.header-content {
   width: 600px;
   padding-bottom: 40px;      
 }
 
-.hero-content h1, p {
+.header-content h1, .header-content p {
   line-height: 1.5em;
 }
 
-.hero-content h1 {
+.header-content h1 {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -186,12 +189,12 @@ a.btn.btn-background:hover {
   letter-spacing: -0.03em;
 }
 
-.hero-content p {
+.header-content p {
   font-size: 18px;
   line-height: 30px;
 }
 
-.hero-bg {
+.header-bg {
   position: absolute;
   top: 0;
   left: 0;  
@@ -203,8 +206,9 @@ a.btn.btn-background:hover {
 /* Animation  */
 
 .desktop-nav {
-  animation: fadeDown 500ms forwards;
   opacity: 0;
+  animation: fadeDown 500ms forwards;
+  animation-delay: 200ms;   
 }
 
 @keyframes fadeDown {
@@ -219,14 +223,53 @@ a.btn.btn-background:hover {
   }
 }
 
-.hero-container .left {
+.header-container .left {
   opacity: 0;
   animation: fadeIn 500ms forwards;
-  animation-delay: 200ms; 
+  animation-delay: 400ms; 
 }
 
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
+}
+
+/* Concept section */
+
+.concept-section {
+  padding: 32px 50px;
+  margin-top: 70px;
+}
+
+.concept-section .concept-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
+}
+.concept-section .concept-container .img {
+  height: 680px;    
+  padding-top: 70px;
+}
+
+.concept-section h2, .concept-section p {
+  text-align: center;
+  color: var(--h2-dark-font-color);
+  padding: 10px 10px;
+}
+
+.concept-section h2 {
+  width: 400px;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 50px;  
+}
+
+.concept-section p {
+  width: 550px;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 30px;  
+  font-weight: 100;
 }
