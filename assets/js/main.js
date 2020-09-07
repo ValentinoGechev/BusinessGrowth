@@ -6,11 +6,9 @@ $(function () {
     });
 
     $(navbar).hover(function () {        
-        if (window.scrollY === 0) {
-            navbar.removeClass('hovered');            
-        }
-        else {
+        if (window.scrollY === 0) 
+            navbar.removeClass('hovered');                    
+        else
             navbar.toggleClass('hovered');
-        }        
     });
 });
