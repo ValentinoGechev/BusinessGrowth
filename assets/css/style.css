@@ -133,6 +133,10 @@ section a.btn {
   font-size: 14px;  
 }
 
+.desktop-nav .menu-items li a.active {
+  color: var(--light-blue-color); 
+}
+
 .btn {  
   color: var(--white-color);
   font-weight: 500;
